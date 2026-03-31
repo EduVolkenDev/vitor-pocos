@@ -393,6 +393,7 @@
 			border-radius:20px;
 			border:1px solid var(--stroke);
 			background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+			margin: 20px auto;
 		}
 		.quote p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
 		.quote strong{display:block; margin-top:10px; font-size:13px; letter-spacing:-0.01em}
@@ -509,6 +510,7 @@
 		.volynx-credit{
 			margin-top:24px;
 			padding-top:18px;
+			padding-bottom:80px;
 			border-top:1px solid rgba(255,255,255,.06);
 			text-align:center;
 		}
@@ -532,22 +534,45 @@
 		}
 		.volynx-link:hover .volynx-wordmark{opacity:1}
 
-		/* Gallery grid */
-		.gallery-grid{
-			display:grid;
-			grid-template-columns:1fr 1fr;
-			gap:10px;
-		}
-		.gallery-grid img{
-			width:100%;
-			height:180px;
-			object-fit:cover;
-			border-radius:14px;
+		/* Photo carousel */
+		.carousel-wrap{
+			position:relative;
+			overflow:hidden;
+			border-radius:18px;
 			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.03);
 		}
-		.gallery-grid img:first-child{
-			grid-column:1 / -1;
-			height:240px;
+		.carousel-track{
+			display:flex;
+			gap:0;
+			transition:transform .5s cubic-bezier(.4,0,.2,1);
+			will-change:transform;
+		}
+		.carousel-track img{
+			width:100%;
+			height:340px;
+			object-fit:cover;
+			flex:0 0 100%;
+		}
+		.carousel-dots{
+			display:flex;
+			justify-content:center;
+			gap:8px;
+			padding:12px 0;
+		}
+		.carousel-dots button{
+			width:8px; height:8px;
+			border-radius:999px;
+			border:1px solid rgba(255,255,255,.20);
+			background:rgba(255,255,255,.12);
+			padding:0;
+			cursor:pointer;
+			transition:.2s ease;
+		}
+		.carousel-dots button.active{
+			width:24px;
+			background:var(--brand);
+			border-color:var(--brand);
 		}
 
 		/* WhatsApp floating */
@@ -612,9 +637,7 @@
 			.header-cta .btn{padding:10px 10px; font-size:12px}
 			.hero-logo{max-width:280px}
 			.hero-icon{width:160px}
-			.gallery-grid{grid-template-columns:1fr}
-			.gallery-grid img:first-child{height:200px}
-			.gallery-grid img{height:180px}
+			.carousel-track img{height:240px}
 			.section-head{flex-direction:column; align-items:flex-start}
 			.container{padding:0 14px}
 		}
@@ -822,15 +845,12 @@
 
 			<div class="steps">
 				<div class="step">
-					<strong><span class="num">1</span> Você chama no WhatsApp</strong>
 					<p>Informa cidade, tipo de imóvel e se é novo poço ou manutenção. Se tiver foto/vídeo do local, melhor ainda.</p>
 				</div>
 				<div class="step">
-					<strong><span class="num">2</span> Alinhamento e orçamento</strong>
 					<p>Você recebe orientação clara do que influencia custo e prazo (solo, profundidade, acesso e materiais).</p>
 				</div>
 				<div class="step">
-					<strong><span class="num">3</span> Execução e entrega</strong>
 					<p>Trabalho organizado, foco em segurança e finalização limpa. Orientações de uso e manutenção.</p>
 				</div>
 			</div>
@@ -846,13 +866,16 @@
 			</div>
 
 			<div class=”split”>
-				<div class=”gallery”>
-					<div class=”gallery-grid”>
-						<img src=”assets/vitor1.webp” alt=”Serviço de poço semi artesiano” loading=”lazy” />
-						<img src=”assets/vitor2.webp” alt=”Perfuração de poço” loading=”lazy” />
-						<img src=”assets/vitor3.webp” alt=”Equipamento de perfuração” loading=”lazy” />
-						<img src=”assets/vitor4.webp” alt=”Trabalho finalizado” loading=”lazy” />
-						<img src=”assets/vitor5.webp” alt=”Instalação de bomba” loading=”lazy” />
+				<div>
+					<div class=”carousel-wrap” id=”photoCarousel”>
+						<div class=”carousel-track”>
+							<img src=”assets/vitor1.webp” alt=”Serviço de poço semi artesiano” />
+							<img src=”assets/vitor2.webp” alt=”Perfuração de poço” />
+							<img src=”assets/vitor3.webp” alt=”Equipamento de perfuração” />
+							<img src=”assets/vitor4.webp” alt=”Trabalho finalizado” />
+							<img src=”assets/vitor5.webp” alt=”Instalação de bomba” />
+						</div>
+						<div class=”carousel-dots” id=”carouselDots”></div>
 					</div>
 				</div>
 
@@ -1103,6 +1126,53 @@
 			i = (i + 1) % notes.length;
 			waNote.textContent = notes[i];
 		}, 3200);
+
+		// ============================
+		// Photo carousel
+		// ============================
+		(function(){
+			const track = qs(".carousel-track");
+			const imgs = qsa("img", track);
+			const dotsWrap = qs("#carouselDots");
+			let cur = 0;
+			let autoTimer;
+
+			imgs.forEach((_, idx) => {
+				const dot = document.createElement("button");
+				dot.ariaLabel = "Foto " + (idx + 1);
+				if(idx === 0) dot.classList.add("active");
+				dot.addEventListener("click", () => goTo(idx));
+				dotsWrap.appendChild(dot);
+			});
+
+			const dots = qsa("button", dotsWrap);
+
+			function goTo(idx){
+				cur = idx;
+				track.style.transform = `translateX(-${cur * 100}%)`;
+				dots.forEach((d, j) => d.classList.toggle("active", j === cur));
+				resetAuto();
+			}
+
+			function next(){ goTo((cur + 1) % imgs.length) }
+
+			function resetAuto(){
+				clearInterval(autoTimer);
+				autoTimer = setInterval(next, 3500);
+			}
+
+			// Touch/swipe support
+			let startX = 0;
+			track.addEventListener("touchstart", e => { startX = e.touches[0].clientX }, {passive:true});
+			track.addEventListener("touchend", e => {
+				const diff = startX - e.changedTouches[0].clientX;
+				if(Math.abs(diff) > 40){
+					diff > 0 ? goTo(Math.min(cur + 1, imgs.length - 1)) : goTo(Math.max(cur - 1, 0));
+				}
+			}, {passive:true});
+
+			resetAuto();
+		})();
 	</script>
 </body>
 </html>
