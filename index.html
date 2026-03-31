@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+	<title>Poço Semi Artesiano na Sua Região | Orçamento Rápido no WhatsApp</title>
+	<meta name="description" content="Perfuração de poço semi artesiano, manutenção e instalação de bomba. Atendimento na região. Peça orçamento rápido pelo WhatsApp." />
+	<meta name="keywords" content="poço semi artesiano, perfuração de poço, limpeza de poço, instalação de bomba, manutenção de poço, artesiano, semi artesiano" />
+	<meta name="theme-color" content="#0b1220" />
+	<link rel="icon" type="image/webp" href="assets/vitorpocosicon.webp" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Poço Semi Artesiano | Orçamento Rápido" />
+	<meta property="og:description" content="Perfuração, manutenção e bomba. Atendimento na região. Clique e peça orçamento no WhatsApp." />
+	<meta property="og:image" content="assets/vitorpocosicon.webp" />
+	<meta property="og:locale" content="pt_BR" />
+
+	<style>
+		:root{
+			--bg:#070b14;
+			--panel:#0b1220;
+			--card:#0f1a31;
+			--stroke:rgba(255,255,255,.10);
+			--stroke2:rgba(255,255,255,.16);
+			--text:rgba(255,255,255,.92);
+			--muted:rgba(255,255,255,.70);
+			--muted2:rgba(255,255,255,.58);
+			--brand:#43d3ff;
+			--brand2:#38ffb3;
+			--warn:#ffcb47;
+			--danger:#ff5c7a;
+			--shadow: 0 20px 60px rgba(0,0,0,.45);
+			--radius:18px;
+			--radius2:26px;
+			--max:1120px;
+		}
+
+		*{box-sizing:border-box}
+		html{height:100%}
+		body{
+			margin:0;
+			min-height:100%;
+			font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+			color:var(--text);
+			background:
+				radial-gradient(1200px 700px at 10% 0%, rgba(67,211,255,.14), transparent 60%),
+				radial-gradient(1000px 600px at 90% 20%, rgba(56,255,179,.10), transparent 55%),
+				radial-gradient(900px 700px at 40% 100%, rgba(255,203,71,.08), transparent 55%),
+				linear-gradient(180deg, #050812 0%, #070b14 45%, #050812 100%);
+			background-attachment:fixed;
+			letter-spacing:-0.01em;
+			overflow-x:hidden;
+		}
+
+		a{color:inherit}
+		.container{max-width:var(--max); margin:0 auto; padding:0 20px}
+		.row{display:flex; gap:22px}
+		.grid{display:grid; gap:18px}
+		.hidden{display:none !important}
+
+		/* Header */
+		header{
+			position:sticky; top:0; z-index:50;
+			backdrop-filter:saturate(140%) blur(14px);
+			background:rgba(7,11,20,.58);
+			border-bottom:1px solid var(--stroke);
+		}
+		.topbar{
+			display:flex; align-items:center; justify-content:space-between;
+			padding:14px 0;
+			gap:12px;
+		}
+		.brand{
+			display:flex; align-items:center; gap:12px;
+			text-decoration:none;
+			min-width:0;
+			flex-shrink:1;
+		}
+		.logo{
+			width:44px; height:44px;
+			border-radius:12px;
+			background:none;
+			border:none;
+			box-shadow:none;
+			overflow:hidden;
+			flex:0 0 auto;
+		}
+		.logo img{
+			width:100%;height:100%;object-fit:cover;display:block;
+		}
+		.hero-logo{
+			display:block;
+			max-width:600px;
+			width:100%;
+			height:auto;
+			margin:0 auto 18px;
+		}
+		.hero-icon{
+			display:block;
+			width:300px;
+			max-width:100%;
+			height:auto;
+			border-radius:22px;
+			margin:0 auto 10px;
+		}
+		.brand strong{font-weight:800; letter-spacing:-0.03em}
+		.brand span{display:block; font-size:12px; color:var(--muted2); margin-top:2px}
+
+		nav{display:flex; align-items:center; gap:16px}
+		nav a{
+			text-decoration:none;
+			font-size:13px;
+			color:var(--muted);
+			padding:10px 10px;
+			border-radius:12px;
+			transition:.18s ease;
+		}
+		nav a:hover{
+			color:var(--text);
+			background:rgba(255,255,255,.06);
+		}
+
+		.header-cta{display:flex; align-items:center; gap:10px; flex-shrink:0}
+		.btn{
+			display:inline-flex; align-items:center; justify-content:center; gap:10px;
+			padding:12px 14px;
+			border-radius:14px;
+			border:1px solid var(--stroke2);
+			background:rgba(255,255,255,.06);
+			color:var(--text);
+			text-decoration:none;
+			font-weight:650;
+			font-size:13px;
+			transition:.18s ease;
+			white-space:nowrap;
+		}
+		.btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.085)}
+		.btn.primary{
+			border:1px solid rgba(67,211,255,.30);
+			background:
+				linear-gradient(135deg, rgba(67,211,255,.16), rgba(56,255,179,.12));
+			box-shadow: 0 18px 45px rgba(67,211,255,.10);
+		}
+		.btn.primary:hover{box-shadow: 0 22px 55px rgba(56,255,179,.12)}
+		.badge{
+			display:inline-flex; align-items:center; gap:8px;
+			padding:8px 10px;
+			border-radius:999px;
+			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.05);
+			color:var(--muted);
+			font-size:12px;
+		}
+		.dot{width:7px; height:7px; border-radius:999px; background:var(--brand2); box-shadow:0 0 0 6px rgba(56,255,179,.12)}
+
+		/* Hero */
+		.hero{
+			padding:42px 0 18px;
+		}
+		.hero .wrap{
+			display:grid;
+			grid-template-columns: 1.15fr .85fr;
+			gap:26px;
+			align-items:stretch;
+		}
+		.panel{
+			border-radius:var(--radius2);
+			background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+			border:1px solid var(--stroke);
+			box-shadow:var(--shadow);
+		}
+		.hero-main{
+			padding:28px 26px;
+			position:relative;
+			overflow:hidden;
+		}
+		.hero-main:before{
+			content:"";
+			position:absolute; inset:-40px -80px auto auto;
+			width:240px; height:240px;
+			background:radial-gradient(circle at 30% 30%, rgba(67,211,255,.30), transparent 65%);
+			filter:blur(2px);
+			transform:rotate(8deg);
+			pointer-events:none;
+		}
+		.hero-main:after{
+			content:"";
+			position:absolute; inset:auto -90px -90px auto;
+			width:340px; height:340px;
+			background:radial-gradient(circle at 30% 30%, rgba(56,255,179,.20), transparent 65%);
+			filter:blur(2px);
+			transform:rotate(-10deg);
+			pointer-events:none;
+		}
+		h1{
+			margin:10px 0 10px;
+			font-size:42px;
+			line-height:1.05;
+			letter-spacing:-0.04em;
+		}
+		.hero p{
+			margin:0 0 18px;
+			color:var(--muted);
+			font-size:15px;
+			line-height:1.55;
+			max-width:60ch;
+		}
+		.hero-ctas{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+		.hero-metrics{
+			margin-top:18px;
+			display:grid;
+			grid-template-columns:repeat(3, minmax(0,1fr));
+			gap:10px;
+		}
+		.metric{
+			padding:12px 12px;
+			border-radius:16px;
+			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.04);
+		}
+		.metric strong{display:block; font-size:16px; letter-spacing:-0.02em}
+		.metric span{display:block; font-size:12px; color:var(--muted2); margin-top:4px}
+
+		.hero-side{
+			padding:20px;
+			display:flex;
+			flex-direction:column;
+			gap:12px;
+		}
+		.card{
+			border-radius:18px;
+			border:1px solid var(--stroke);
+			background:rgba(15,26,49,.55);
+			padding:14px 14px;
+		}
+		.card h3{
+			margin:0 0 8px;
+			font-size:14px;
+			letter-spacing:-0.02em;
+		}
+		.card p{
+			margin:0;
+			color:var(--muted);
+			font-size:13px;
+			line-height:1.45;
+		}
+		.list{
+			margin:10px 0 0;
+			padding:0;
+			list-style:none;
+			display:grid;
+			gap:8px;
+		}
+		.list li{
+			display:flex; gap:10px; align-items:flex-start;
+			color:var(--muted);
+			font-size:13px;
+			line-height:1.4;
+		}
+		.check{
+			width:18px; height:18px; border-radius:6px;
+			background:rgba(56,255,179,.14);
+			border:1px solid rgba(56,255,179,.26);
+			display:inline-flex; align-items:center; justify-content:center;
+			flex:0 0 auto;
+			margin-top:1px;
+		}
+		.check svg{width:12px; height:12px}
+
+		/* Sections */
+		section{padding:26px 0}
+		.section-head{
+			display:flex;
+			align-items:flex-end;
+			justify-content:space-between;
+			gap:18px;
+			margin-bottom:12px;
+		}
+		.section-head h2{
+			margin:0;
+			font-size:22px;
+			letter-spacing:-0.03em;
+		}
+		.section-head p{
+			margin:0;
+			color:var(--muted);
+			font-size:13px;
+			line-height:1.45;
+			max-width:62ch;
+		}
+		.cards{
+			display:grid;
+			grid-template-columns:repeat(3, minmax(0, 1fr));
+			gap:14px;
+		}
+		.service{
+			padding:16px;
+			border-radius:20px;
+			border:1px solid var(--stroke);
+			background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+		}
+		.service .icon{
+			width:42px; height:42px; border-radius:14px;
+			border:1px solid rgba(67,211,255,.25);
+			background:radial-gradient(circle at 30% 30%, rgba(67,211,255,.18), rgba(255,255,255,.02) 60%);
+			display:flex; align-items:center; justify-content:center;
+			margin-bottom:10px;
+		}
+		.service h3{margin:0 0 8px; font-size:15px; letter-spacing:-0.02em}
+		.service p{margin:0; color:var(--muted); font-size:13px; line-height:1.5}
+		.service .meta{
+			margin-top:12px;
+			display:flex; gap:10px; flex-wrap:wrap;
+		}
+		.pill{
+			font-size:12px;
+			color:var(--muted);
+			padding:7px 10px;
+			border-radius:999px;
+			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.04);
+		}
+
+		.steps{
+			display:grid;
+			grid-template-columns:repeat(3, minmax(0,1fr));
+			gap:14px;
+		}
+		.step{
+			padding:16px;
+			border-radius:20px;
+			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.04);
+			position:relative;
+			overflow:hidden;
+		}
+		.step:before{
+			content:"";
+			position:absolute; inset:-120px auto auto -120px;
+			width:260px; height:260px;
+			background:radial-gradient(circle at 30% 30%, rgba(255,203,71,.12), transparent 65%);
+			pointer-events:none;
+		}
+		.step strong{
+			display:flex; align-items:center; gap:10px;
+			font-size:14px;
+		}
+		.num{
+			width:28px; height:28px; border-radius:10px;
+			border:1px solid rgba(255,255,255,.14);
+			background:rgba(255,255,255,.06);
+			display:flex; align-items:center; justify-content:center;
+			font-weight:800;
+		}
+		.step p{margin:10px 0 0; color:var(--muted); font-size:13px; line-height:1.5}
+
+		.split{
+			display:grid;
+			grid-template-columns: 1fr 1fr;
+			gap:14px;
+		}
+		.gallery{
+			padding:16px;
+			border-radius:20px;
+			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.03);
+		}
+		.gallery .ph{
+			border-radius:18px;
+			border:1px dashed rgba(255,255,255,.22);
+			background:rgba(255,255,255,.03);
+			min-height:220px;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			padding:16px;
+			color:var(--muted2);
+			font-size:13px;
+			text-align:center;
+			line-height:1.45;
+		}
+		.testimonials{
+			display:grid;
+			gap:12px;
+		}
+		.quote{
+			padding:16px;
+			border-radius:20px;
+			border:1px solid var(--stroke);
+			background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+		}
+		.quote p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
+		.quote strong{display:block; margin-top:10px; font-size:13px; letter-spacing:-0.01em}
+
+		.faq{
+			display:grid;
+			grid-template-columns: 1.1fr .9fr;
+			gap:14px;
+			align-items:start;
+		}
+		.accordion{
+			border-radius:20px;
+			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.03);
+			overflow:hidden;
+		}
+		details{
+			border-top:1px solid rgba(255,255,255,.08);
+			padding:14px 16px;
+		}
+		details:first-child{border-top:0}
+		summary{
+			cursor:pointer;
+			list-style:none;
+			font-weight:650;
+			font-size:13px;
+			color:var(--text);
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			gap:12px;
+		}
+		summary::-webkit-details-marker{display:none}
+		details p{
+			margin:10px 0 0;
+			color:var(--muted);
+			font-size:13px;
+			line-height:1.55;
+		}
+		.chev{
+			width:28px; height:28px; border-radius:10px;
+			border:1px solid rgba(255,255,255,.12);
+			background:rgba(255,255,255,.05);
+			display:flex; align-items:center; justify-content:center;
+			flex:0 0 auto;
+			transition:.18s ease;
+		}
+		details[open] .chev{transform:rotate(180deg)}
+		.sidebox{
+			padding:16px;
+			border-radius:20px;
+			border:1px solid var(--stroke);
+			background:rgba(15,26,49,.55);
+		}
+		.sidebox h3{margin:0 0 8px; font-size:14px}
+		.sidebox p{margin:0 0 12px; color:var(--muted); font-size:13px; line-height:1.55}
+		.form{
+			display:grid;
+			gap:10px;
+		}
+		.input{
+			width:100%;
+			padding:12px 12px;
+			border-radius:14px;
+			border:1px solid rgba(255,255,255,.14);
+			background:rgba(255,255,255,.04);
+			color:var(--text);
+			outline:none;
+			font-size:13px;
+		}
+		.input::placeholder{color:rgba(255,255,255,.42)}
+		textarea.input{min-height:96px; resize:vertical}
+
+		.footer{
+			padding:24px 0 34px;
+			border-top:1px solid rgba(255,255,255,.08);
+			margin-top:18px;
+		}
+		.footer-grid{
+			display:grid;
+			grid-template-columns: 1.1fr .9fr;
+			gap:14px;
+			align-items:start;
+		}
+		.footer small{color:var(--muted2)}
+		.kv{
+			display:grid;
+			gap:8px;
+			margin-top:10px;
+		}
+		.kv div{
+			display:flex; gap:10px; align-items:flex-start;
+			color:var(--muted);
+			font-size:13px;
+			line-height:1.45;
+		}
+		.kv b{color:var(--text); font-weight:650}
+		.mapbox{
+			border-radius:20px;
+			border:1px solid var(--stroke);
+			background:rgba(255,255,255,.03);
+			overflow:hidden;
+			min-height:220px;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			color:var(--muted2);
+			font-size:13px;
+			padding:16px;
+			text-align:center;
+		}
+
+		/* Volynx credit */
+		.volynx-credit{
+			margin-top:24px;
+			padding-top:18px;
+			border-top:1px solid rgba(255,255,255,.06);
+			text-align:center;
+		}
+		.volynx-link{
+			display:inline-flex;
+			align-items:center;
+			gap:8px;
+			text-decoration:none;
+			color:var(--muted2);
+			font-size:12px;
+			transition:.2s ease;
+			opacity:.7;
+		}
+		.volynx-link:hover{opacity:1}
+		.volynx-wordmark{
+			height:18px;
+			width:auto;
+			filter:brightness(0) invert(1);
+			opacity:.6;
+			transition:.2s ease;
+		}
+		.volynx-link:hover .volynx-wordmark{opacity:1}
+
+		/* Gallery grid */
+		.gallery-grid{
+			display:grid;
+			grid-template-columns:1fr 1fr;
+			gap:10px;
+		}
+		.gallery-grid img{
+			width:100%;
+			height:180px;
+			object-fit:cover;
+			border-radius:14px;
+			border:1px solid var(--stroke);
+		}
+		.gallery-grid img:first-child{
+			grid-column:1 / -1;
+			height:240px;
+		}
+
+		/* WhatsApp floating */
+		.wafab{
+			position:fixed;
+			right:16px;
+			bottom:16px;
+			z-index:80;
+			display:flex;
+			flex-direction:column;
+			gap:10px;
+			align-items:flex-end;
+		}
+		.wafab a{
+			text-decoration:none;
+		}
+		.wa{
+			display:flex;
+			align-items:center;
+			gap:10px;
+			padding:12px 14px;
+			border-radius:999px;
+			border:1px solid rgba(56,255,179,.28);
+			background:linear-gradient(135deg, rgba(56,255,179,.18), rgba(67,211,255,.10));
+			box-shadow: 0 22px 55px rgba(0,0,0,.40);
+			color:var(--text);
+			font-weight:750;
+			font-size:13px;
+			transition:.18s ease;
+		}
+		.wa:hover{transform:translateY(-1px)}
+		.wa svg{width:18px; height:18px}
+		.wa-note{
+			font-size:12px;
+			color:var(--muted);
+			background:rgba(0,0,0,.35);
+			border:1px solid rgba(255,255,255,.10);
+			padding:8px 10px;
+			border-radius:999px;
+		}
+
+		/* Responsive — mobile-first overrides */
+		@media (max-width: 980px){
+			.hero .wrap{grid-template-columns:1fr}
+			h1{font-size:34px}
+			.cards{grid-template-columns:1fr}
+			.steps{grid-template-columns:1fr}
+			.split{grid-template-columns:1fr}
+			.faq{grid-template-columns:1fr}
+			.footer-grid{grid-template-columns:1fr}
+			nav{display:none}
+			.hero-logo{max-width:400px}
+			.hero-icon{width:200px}
+			.hero-metrics{grid-template-columns:1fr}
+			.topbar{flex-wrap:wrap; gap:10px}
+		}
+		@media (max-width: 520px){
+			h1{font-size:26px}
+			.hero-main{padding:18px 14px}
+			.hero-side{padding:14px}
+			.metric{padding:10px}
+			.header-cta .btn{padding:10px 10px; font-size:12px}
+			.hero-logo{max-width:280px}
+			.hero-icon{width:160px}
+			.gallery-grid{grid-template-columns:1fr}
+			.gallery-grid img:first-child{height:200px}
+			.gallery-grid img{height:180px}
+			.section-head{flex-direction:column; align-items:flex-start}
+			.container{padding:0 14px}
+		}
+		@media (max-width: 360px){
+			h1{font-size:22px}
+			.hero-logo{max-width:220px}
+			.hero-icon{width:120px}
+			.brand strong{font-size:14px}
+			.brand span{font-size:11px}
+		}
+
+		/* Accessibility */
+		:focus-visible{outline:2px solid rgba(67,211,255,.55); outline-offset:2px}
+	</style>
+
+	<script type="application/ld+json" id="schemaLocal">
+	{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"name": "NOME DA EMPRESA (AJUSTE)",
+		"description": "Perfuração de poço semi artesiano, manutenção e instalação de bomba. Atendimento na região.",
+		"telephone": "+55SEUNUMERO",
+		"areaServed": "SUA CIDADE / REGIÃO",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "SUA CIDADE",
+			"addressRegion": "SEU ESTADO",
+			"addressCountry": "BR"
+		},
+		"url": "https://seu-dominio.com.br",
+		"openingHours": "Mo-Sa 08:00-18:00"
+	}
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="topbar">
+				<a class="brand" href="#inicio" aria-label="Início">
+					<div class="logo" aria-hidden="true">
+						<img src="assets/vitorpocoslogo.webp" alt="Vitor Poços">
+					</div>
+					<div>
+						<strong>Vitor Poços</strong>
+						<span>Poço semi artesiano • <span id="cityLabel">Atibaia e Região</span></span>
+					</div>
+				</a>
+
+				<nav aria-label="Navegação">
+					<a href="#servicos">Serviços</a>
+					<a href="#como-funciona">Como funciona</a>
+					<a href="#provas">Trabalhos</a>
+					<a href="#faq">FAQ</a>
+					<a href="#contato">Contato</a>
+				</nav>
+
+				<div class="header-cta">
+					<a class="btn" href="#contato">Orçamento</a>
+					<a class="btn primary" id="waTop" href="https://wa.me/5511963442391" rel="noopener">WhatsApp</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main id="inicio" class="hero">
+		<div class="container">
+			<div class="wrap">
+				<div class="panel hero-main">
+					<img src="assets/vitorpocoslogo.webp" alt="Vitor Poços" class="hero-logo" />
+					<span class="badge"><span class="dot" aria-hidden="true"></span> Atendimento na região • Resposta rápida</span>
+
+					<h1>
+						Perfuração de <span style="background:linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; background-clip:text; color:transparent;">poço semi artesiano</span>
+						com execução limpa e objetiva
+					</h1>
+
+					<p>
+						Seu objetivo é simples: água com segurança. O nosso também. Fazemos perfuração, manutenção e instalação de bomba com
+						atendimento em Atibaia e região e orçamento direto no WhatsApp.
+					</p>
+
+					<div class="hero-ctas">
+						<a class="btn primary" id="waHero" href="https://wa.me/5511963442391" rel="noopener">
+							<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L4 20l1.3-3.1A8.5 8.5 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 9.5c.2-.5.4-.6.8-.6h.7c.2 0 .4.1.5.3l.8 1.9c.1.3.1.5-.1.7l-.4.5c-.2.2-.2.5 0 .8.6 1 1.5 1.8 2.4 2.4.3.2.6.2.8 0l.5-.4c.2-.2.4-.2.7-.1l1.9.8c.2.1.3.3.3.5v.7c0 .4-.1.6-.6.8-.8.3-2 .4-3.6-.3-1.6-.7-3.3-2.2-4.6-4.6-.7-1.6-.6-2.8-.3-3.6Z" fill="currentColor" opacity=".9"/></svg>
+							Pedir orçamento no WhatsApp
+						</a>
+						<a class="btn" href="#servicos">Ver serviços</a>
+					</div>
+
+					<div class="hero-metrics" role="list">
+						<div class="metric" role="listitem">
+							<strong>Orçamento rápido</strong>
+							<span>Mensagem direta • Sem enrolação</span>
+						</div>
+						<div class="metric" role="listitem">
+							<strong>Execução limpa</strong>
+							<span>Trabalho organizado e objetivo</span>
+						</div>
+						<div class="metric" role="listitem">
+							<strong>Atendimento em toda a cidade de Atibaia e arredores</strong>
+						</div>
+					</div>
+				</div>
+
+				<aside class="panel hero-side" aria-label="Destaques">
+					<div class="card">
+						<h3>Serviços principais</h3>
+						<ul class="list">
+							<li>
+								<span class="check" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								</span>
+								Perfuração de poço semi artesiano
+							</li>
+							<li>
+								<span class="check" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								</span>
+								Manutenção / limpeza e avaliação
+							</li>
+							<li>
+								<span class="check" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								</span>
+								Instalação e troca de bomba
+							</li>
+						</ul>
+					</div>
+
+					<div class="card">
+						<h3>Transparência</h3>
+						<p>Você recebe orientação clara sobre etapas, prazos e o que influencia o custo (solo, profundidade, acesso e materiais).</p>
+					</div>
+
+					<div class="card" style="text-align:center;padding:18px">
+						<img src="assets/vitorpocosicon.webp" alt="Vitor Poços" class="hero-icon" />
+						<h3>Quer acelerar?</h3>
+						<p>Já manda no WhatsApp: <b>cidade</b>, <b>tipo de imóvel</b> e se é <b>novo poço</b> ou <b>manutenção</b>.</p>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</main>
+
+	<section id="servicos">
+		<div class="container">
+			<div class="section-head">
+				<div>
+					<h2>Serviços</h2>
+				</div>
+			</div>
+
+			<div class="cards">
+				<div class="service">
+					<div class="icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M12 2v20M4 7h16M6 7v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+					</div>
+					<h3>Perfuração de poço semi artesiano</h3>
+					<p>Perfuração com planejamento e execução organizada. Orientação sobre profundidade estimada e necessidades do local.</p>
+					<div class="meta">
+						<span class="pill">Novo poço</span>
+						<span class="pill">Residencial / rural</span>
+						<span class="pill">Orçamento no WhatsApp</span>
+					</div>
+				</div>
+
+				<div class="service">
+					<div class="icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M4 12a8 8 0 0 0 16 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 4v8l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+					<h3>Manutenção e avaliação</h3>
+					<p>Diagnóstico do sistema, verificação de vazão, ruídos, falhas e recomendações práticas pra resolver o problema.</p>
+					<div class="meta">
+						<span class="pill">Baixa vazão</span>
+						<span class="pill">Falha na bomba</span>
+						<span class="pill">Preventivo</span>
+					</div>
+				</div>
+
+				<div class="service">
+					<div class="icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M7 14v7h10v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 3v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.5 7.5 12 3l3.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+					<h3>Instalação / troca de bomba</h3>
+					<p>Seleção e instalação conforme necessidade de vazão/pressão. Ajuste fino pra reduzir dor de cabeça e retrabalho.</p>
+					<div class="meta">
+						<span class="pill">Instalação</span>
+						<span class="pill">Substituição</span>
+						<span class="pill">Ajuste de sistema</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="como-funciona">
+		<div class="container">
+			<div class="section-head">
+				<div>
+					<h2>Como funciona</h2>
+					<p>Processo em 3 passos. Simples, previsível e sem “surpresa” no meio do caminho.</p>
+				</div>
+			</div>
+
+			<div class="steps">
+				<div class="step">
+					<strong><span class="num">1</span> Você chama no WhatsApp</strong>
+					<p>Informa cidade, tipo de imóvel e se é novo poço ou manutenção. Se tiver foto/vídeo do local, melhor ainda.</p>
+				</div>
+				<div class="step">
+					<strong><span class="num">2</span> Alinhamento e orçamento</strong>
+					<p>Você recebe orientação clara do que influencia custo e prazo (solo, profundidade, acesso e materiais).</p>
+				</div>
+				<div class="step">
+					<strong><span class="num">3</span> Execução e entrega</strong>
+					<p>Trabalho organizado, foco em segurança e finalização limpa. Orientações de uso e manutenção.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="provas">
+		<div class="container">
+			<div class="section-head">
+				<div>
+					<h2>Trabalhos e confiança</h2>
+				</div>
+			</div>
+
+			<div class=”split”>
+				<div class=”gallery”>
+					<div class=”gallery-grid”>
+						<img src=”assets/vitor1.webp” alt=”Serviço de poço semi artesiano” loading=”lazy” />
+						<img src=”assets/vitor2.webp” alt=”Perfuração de poço” loading=”lazy” />
+						<img src=”assets/vitor3.webp” alt=”Equipamento de perfuração” loading=”lazy” />
+						<img src=”assets/vitor4.webp” alt=”Trabalho finalizado” loading=”lazy” />
+						<img src=”assets/vitor5.webp” alt=”Instalação de bomba” loading=”lazy” />
+					</div>
+				</div>
+
+				<div class=”testimonials”>
+					<div class="quote">
+						<p>“Atendimento rápido, explicaram tudo e entregaram no prazo. Recomendo.”</p>
+					</div>
+					<div class="quote">
+						<p>“Resolveram a baixa vazão e ajustaram a bomba. Ficou perfeito.”</p>
+					</div>
+					<div class="quote">
+						<p>“Trabalho organizado e limpo. Orçamento claro, sem surpresas.”</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="faq">
+		<div class="container">
+			<div class="section-head">
+				<div>
+					<h2>FAQ</h2>
+				</div>
+			</div>
+
+			<div class="faq">
+				<div class="accordion" aria-label="Perguntas frequentes">
+					<details open>
+						<summary>
+							Quanto tempo leva?
+							<span class="chev" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							</span>
+						</summary>
+						<p>Depende do acesso, tipo de solo e profundidade. No WhatsApp a gente faz a triagem e informa uma estimativa realista.</p>
+					</details>
+
+					<details>
+						<summary>
+							O que define o preço?
+							<span class="chev" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							</span>
+						</summary>
+						<p>Principalmente: profundidade, solo, distância/locomoção, facilidade de acesso, materiais e necessidade de bomba/instalação.</p>
+					</details>
+
+					<details>
+						<summary>
+							Vocês atendem minha cidade?
+							<span class="chev" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							</span>
+						</summary>
+						<p>Atendemos a região de <span class="cityInline">Atibaia</span> e cidades próximas. Manda sua localização no WhatsApp que confirmamos na hora.</p>
+					</details>
+
+					<details>
+						<summary>
+							Precisa de documentação?
+							<span class="chev" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							</span>
+						</summary>
+						<p>Varia por município e finalidade. Se você quiser, podemos orientar sobre o básico e indicar os próximos passos.</p>
+					</details>
+				</div>
+
+				<div class="sidebox" id="contato">
+					<h3>Orçamento (rápido e direto)</h3>
+
+					<form class="form" id="leadForm">
+						<input class="input" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" />
+						<input class="input" id="cidade" name="cidade" placeholder="Cidade / bairro" autocomplete="address-level2" />
+						<input class="input" id="tipo" name="tipo" placeholder="Novo poço ou manutenção?" />
+						<textarea class="input" id="msg" name="msg" placeholder="Descreva rapidamente (ex.: baixa vazão, trocar bomba, novo poço em sítio...)"></textarea>
+
+						<button class="btn primary" type="submit">
+							Enviar no WhatsApp
+							<span aria-hidden="true">→</span>
+						</button>
+
+						<small style="color:var(--muted2); line-height:1.45">
+							Se preferir, clique no botão flutuante do WhatsApp no canto da tela.
+						</small>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-grid">
+				<div>
+					<a class="brand" href="#inicio" aria-label="Voltar ao topo">
+						<div class="logo" aria-hidden="true">
+							<img src="assets/vitorpocoslogo.webp" alt="Vitor Poços">
+						</div>
+						<div>
+							<strong>Vitor Poços</strong>
+							<span>Poços • Manutenção • Bombas</span>
+						</div>
+					</a>
+
+					<div class="kv" aria-label="Informações de contato">
+						<div><b>WhatsApp:</b> <span id="phoneLabel">+55 (11) 96344-2391</span></div>
+						<div><b>Atendimento:</b> <span class="cityInline">Atibaia</span> e região</div>
+						<div><b>Horário:</b> Seg–Sáb • 08:00–18:00</div>
+					</div>
+
+					<p style="margin:14px 0 0; color:var(--muted2); font-size:12px; line-height:1.55">
+						© <span id="year"></span> Vitor Poços. Todos os direitos reservados.
+					</p>
+				</div>
+			</div>
+
+			<div class="volynx-credit">
+				<a href="https://volynx.world" target="_blank" rel="noopener" class="volynx-link">
+					<span>Desenvolvido por</span>
+					<img src="assets/new-wordmark.webp" alt="VOLYNX" class="volynx-wordmark" />
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<div class="wafab" aria-label="Contato rápido">
+		<div class="wa-note" id="waNote">Orçamento rápido</div>
+		<a class="wa" id="waFab" href="https://wa.me/5511963442391" rel="noopener" aria-label="Chamar no WhatsApp">
+			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L4 20l1.3-3.1A8.5 8.5 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.6"/>
+				<path d="M9.2 9.5c.2-.5.4-.6.8-.6h.7c.2 0 .4.1.5.3l.8 1.9c.1.3.1.5-.1.7l-.4.5c-.2.2-.2.5 0 .8.6 1 1.5 1.8 2.4 2.4.3.2.6.2.8 0l.5-.4c.2-.2.4-.2.7-.1l1.9.8c.2.1.3.3.3.5v.7c0 .4-.1.6-.6.8-.8.3-2 .4-3.6-.3-1.6-.7-3.3-2.2-4.6-4.6-.7-1.6-.6-2.8-.3-3.6Z" fill="currentColor" opacity=".9"/>
+			</svg>
+			Chamar no WhatsApp
+		</a>
+	</div>
+
+	<script>
+		// ============================
+		// CONFIG (AJUSTE AQUI)
+		// ============================
+		const CONFIG = {
+			businessName: "Vitor Poços",
+			city: "Atibaia",
+			state: "São Paulo",
+			// WhatsApp no formato DDI+DDD+NUMERO, só dígitos:
+			whatsappDigits: "5511963442391",
+			// Mensagem padrão (pode deixar, o formulário monta por cima)
+			defaultMessage: "Olá! Gostaria de um orçamento para poço semi artesiano. Minha cidade é: " + "SUA CIDADE" + "."
+		};
+
+		// ============================
+		// Helpers
+		// ============================
+		const qs = (s, el=document) => el.querySelector(s);
+		const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
+
+		function waLink(message){
+			const base = "https://wa.me/" + CONFIG.whatsappDigits;
+			const text = encodeURIComponent(message || CONFIG.defaultMessage);
+			return base + "?text=" + text;
+		}
+
+		function setText(selector, value){
+			qsa(selector).forEach(el => el.textContent = value);
+		}
+
+		// ============================
+		// Inject business info
+		// ============================
+		document.title = `Poço Semi Artesiano em ${CONFIG.city} | Orçamento Rápido no WhatsApp`;
+
+		setText("strong", (qs("strong")?.textContent === "Vitor Poços") ? CONFIG.businessName : qs("strong")?.textContent);
+		setText("#cityLabel", CONFIG.city);
+		setText(".cityInline", CONFIG.city);
+		qs("#phoneLabel").textContent = "+" + CONFIG.whatsappDigits.replace(/^(\d{2})(\d{2})(\d{4,5})(\d{4})$/, "$1 ($2) $3-$4");
+
+		qs("#year").textContent = new Date().getFullYear();
+
+		// Update brand names in visible spots (safe, limited)
+		qsa("strong").forEach(el => {
+			if (el.textContent.trim() === "Vitor Poços") el.textContent = CONFIG.businessName;
+		});
+
+		// Update JSON-LD schema
+		try{
+			const schemaEl = qs("#schemaLocal");
+			const schema = JSON.parse(schemaEl.textContent);
+			schema.name = CONFIG.businessName;
+			schema.telephone = "+" + CONFIG.whatsappDigits;
+			schema.areaServed = `${CONFIG.city} e região`;
+			schema.address.addressLocality = CONFIG.city;
+			schema.address.addressRegion = CONFIG.state;
+			schemaEl.textContent = JSON.stringify(schema, null, 2);
+		}catch(e){}
+
+		// ============================
+		// WhatsApp CTAs
+		// ============================
+		const waMsgBase = () =>
+			`Olá! Quero um orçamento.\n\nCidade/Região: ${CONFIG.city}\nServiço: poço semi artesiano / manutenção\n\nPode me orientar?`;
+
+		const waTop = qs("#waTop");
+		const waHero = qs("#waHero");
+		const waFab = qs("#waFab");
+
+		const baseLink = waLink(waMsgBase());
+		waTop.href = baseLink;
+		waHero.href = baseLink;
+		waFab.href = baseLink;
+
+		// ============================
+		// Lead form => WhatsApp
+		// ============================
+		qs("#leadForm").addEventListener("submit", (ev) => {
+			ev.preventDefault();
+
+			const nome = qs("#nome").value.trim();
+			const cidade = qs("#cidade").value.trim();
+			const tipo = qs("#tipo").value.trim();
+			const msg = qs("#msg").value.trim();
+
+			const parts = [
+				"Olá! Quero um orçamento.",
+				nome ? `\nNome: ${nome}` : "",
+				cidade ? `\nCidade/Bairro: ${cidade}` : "",
+				tipo ? `\nServiço: ${tipo}` : "",
+				msg ? `\nDetalhes: ${msg}` : "",
+				"\n\n(Enviado pelo site)"
+			].join("");
+
+			window.open(waLink(parts), "_blank", "noopener,noreferrer");
+		});
+
+		// ============================
+		// Micro UX: dynamic note
+		// ============================
+		const waNote = qs("#waNote");
+		const notes = [
+			"Orçamento rápido",
+			"Resposta direta",
+			"Atendimento na região",
+			"Chama no WhatsApp"
+		];
+		let i = 0;
+		setInterval(() => {
+			i = (i + 1) % notes.length;
+			waNote.textContent = notes[i];
+		}, 3200);
+	</script>
+</body>
+</html>
