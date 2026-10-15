@@ -304,6 +304,27 @@
 			border:1px solid var(--stroke);
 			background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
 		}
+		.service-visual{
+			height:148px;
+			margin:-2px -2px 16px;
+			border-radius:16px;
+			border:1px solid rgba(67,211,255,.14);
+			background:
+				radial-gradient(circle at 50% 45%, rgba(67,211,255,.16), transparent 58%),
+				rgba(3,9,20,.62);
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			overflow:hidden;
+		}
+		.service-visual img{
+			width:100%;
+			height:100%;
+			object-fit:contain;
+			filter:drop-shadow(0 14px 18px rgba(0,0,0,.36));
+			transition:transform .25s ease;
+		}
+		.service:hover .service-visual img{transform:scale(1.04)}
 		.service .icon{
 			width:42px; height:42px; border-radius:14px;
 			border:1px solid rgba(67,211,255,.25);
@@ -358,6 +379,23 @@
 			font-weight:800;
 		}
 		.step p{margin:10px 0 0; color:var(--muted); font-size:13px; line-height:1.5}
+		.step-media{
+			height:92px;
+			margin:0 -2px 14px;
+			border-radius:15px;
+			border:1px solid rgba(67,211,255,.12);
+			background:radial-gradient(circle at 50% 50%, rgba(56,255,179,.10), transparent 62%), rgba(3,9,20,.46);
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			overflow:hidden;
+		}
+		.step-media img{
+			width:100%;
+			height:100%;
+			object-fit:contain;
+			filter:drop-shadow(0 10px 14px rgba(0,0,0,.34));
+		}
 
 		.split{
 			display:grid;
@@ -397,6 +435,12 @@
 		}
 		.quote p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
 		.quote strong{display:block; margin-top:10px; font-size:13px; letter-spacing:-0.01em}
+		.visual-note{
+			margin:10px 0 0;
+			color:var(--muted2);
+			font-size:12px;
+			line-height:1.45;
+		}
 
 		.faq{
 			display:grid;
@@ -738,7 +782,8 @@
 							<span>Trabalho organizado e objetivo</span>
 						</div>
 						<div class="metric" role="listitem">
-							<strong>Atendimento em toda a cidade de Atibaia e arredores</strong>
+							<strong>Atendimento regional</strong>
+							<span>Atibaia e cidades próximas</span>
 						</div>
 					</div>
 				</div>
@@ -774,8 +819,8 @@
 					</div>
 
 					<div class="card" style="text-align:center;padding:18px">
-						<img src="assets/vitorpocosicon.webp" alt="Vitor Poços" class="hero-icon" />
-						<h3>Quer acelerar?</h3>
+						<img src="assets/vitor-pocos1.webp" alt="Equipamento hidráulico com fluxo de água" class="hero-icon" loading="eager" decoding="async" />
+						<h3>Equipamento e clareza</h3>
 						<p>Já manda no WhatsApp: <b>cidade</b>, <b>tipo de imóvel</b> e se é <b>novo poço</b> ou <b>manutenção</b>.</p>
 					</div>
 				</aside>
@@ -793,6 +838,9 @@
 
 			<div class="cards">
 				<div class="service">
+					<div class="service-visual">
+						<img src="assets/vitor-pocos4.webp" alt="Ilustração de um poço atravessando diferentes camadas do solo" loading="lazy" decoding="async" />
+					</div>
 					<div class="icon" aria-hidden="true">
 						<svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M12 2v20M4 7h16M6 7v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
 					</div>
@@ -806,6 +854,9 @@
 				</div>
 
 				<div class="service">
+					<div class="service-visual">
+						<img src="assets/vitor-pocos2.webp" alt="Ilustração de equipamentos e ferramentas para manutenção" loading="lazy" decoding="async" />
+					</div>
 					<div class="icon" aria-hidden="true">
 						<svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M4 12a8 8 0 0 0 16 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 4v8l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 					</div>
@@ -819,6 +870,9 @@
 				</div>
 
 				<div class="service">
+					<div class="service-visual">
+						<img src="assets/vitor-pocos3.webp" alt="Ilustração de bomba e sistema de pressurização" loading="lazy" decoding="async" />
+					</div>
 					<div class="icon" aria-hidden="true">
 						<svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M7 14v7h10v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 3v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.5 7.5 12 3l3.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 					</div>
@@ -845,12 +899,21 @@
 
 			<div class="steps">
 				<div class="step">
+					<div class="step-media">
+						<img src="assets/vitor-pocos7.webp" alt="Equipamento de perfuração em operação" loading="lazy" decoding="async" />
+					</div>
 					<p>Informa cidade, tipo de imóvel e se é novo poço ou manutenção. Se tiver foto/vídeo do local, melhor ainda.</p>
 				</div>
 				<div class="step">
+					<div class="step-media">
+						<img src="assets/vitor-pocos6.webp" alt="Caminhão e estrutura de perfuração" loading="lazy" decoding="async" />
+					</div>
 					<p>Você recebe orientação clara do que influencia custo e prazo (solo, profundidade, acesso e materiais).</p>
 				</div>
 				<div class="step">
+					<div class="step-media">
+						<img src="assets/vitor-pocos5.webp" alt="Bomba submersível e tubulação hidráulica" loading="lazy" decoding="async" />
+					</div>
 					<p>Trabalho organizado, foco em segurança e finalização limpa. Orientações de uso e manutenção.</p>
 				</div>
 			</div>
@@ -862,24 +925,26 @@
 			<div class="section-head">
 				<div>
 					<h2>Trabalhos e confiança</h2>
+					<p>Veja alguns registros dos serviços e entenda o padrão de cuidado aplicado em cada atendimento.</p>
+					<p class="visual-note">As ilustrações acima explicam os tipos de serviço. O carrossel abaixo reúne registros visuais dos trabalhos.</p>
 				</div>
 			</div>
 
-			<div class=”split”>
+			<div class="split">
 				<div>
-					<div class=”carousel-wrap” id=”photoCarousel”>
-						<div class=”carousel-track”>
-							<img src=”assets/vitor1.webp” alt=”Serviço de poço semi artesiano” />
-							<img src=”assets/vitor2.webp” alt=”Perfuração de poço” />
-							<img src=”assets/vitor3.webp” alt=”Equipamento de perfuração” />
-							<img src=”assets/vitor4.webp” alt=”Trabalho finalizado” />
-							<img src=”assets/vitor5.webp” alt=”Instalação de bomba” />
+					<div class="carousel-wrap" id="photoCarousel" aria-label="Fotos de serviços realizados">
+						<div class="carousel-track">
+							<img src="assets/vitor1.webp" alt="Serviço de poço semi artesiano" fetchpriority="high" decoding="async" />
+							<img src="assets/vitor2.webp" alt="Perfuração de poço" loading="lazy" decoding="async" />
+							<img src="assets/vitor3.webp" alt="Equipamento de perfuração" loading="lazy" decoding="async" />
+							<img src="assets/vitor4.webp" alt="Trabalho finalizado" loading="lazy" decoding="async" />
+							<img src="assets/vitor5.webp" alt="Instalação de bomba" loading="lazy" decoding="async" />
 						</div>
-						<div class=”carousel-dots” id=”carouselDots”></div>
+						<div class="carousel-dots" id="carouselDots"></div>
 					</div>
 				</div>
 
-				<div class=”testimonials”>
+				<div class="testimonials">
 					<div class="quote">
 						<p>“Atendimento rápido, explicaram tudo e entregaram no prazo. Recomendo.”</p>
 					</div>
@@ -1049,7 +1114,6 @@
 		// ============================
 		document.title = `Poço Semi Artesiano em ${CONFIG.city} | Orçamento Rápido no WhatsApp`;
 
-		setText("strong", (qs("strong")?.textContent === "Vitor Poços") ? CONFIG.businessName : qs("strong")?.textContent);
 		setText("#cityLabel", CONFIG.city);
 		setText(".cityInline", CONFIG.city);
 		qs("#phoneLabel").textContent = "+" + CONFIG.whatsappDigits.replace(/^(\d{2})(\d{2})(\d{4,5})(\d{4})$/, "$1 ($2) $3-$4");
